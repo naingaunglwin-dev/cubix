@@ -1,0 +1,23 @@
+{
+    "name": "naingaunglwin-dev/cubix",
+    "version": "1.0.0",
+    "description": "Simple and Lightweight PHP Modular Framework",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "naingaunglwin-dev",
+            "email": "naingaunglwin.wd@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Cubix\\": "lib/",
+            "App\\": "app/"
+        }
+    },
+    "require": {
+        "php": ">=8.4",
+        "symfony/console": "*"
+    }
+}
