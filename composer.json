@@ -14,7 +14,10 @@
         "psr-4": {
             "Cubix\\": "lib/",
             "App\\": "app/"
-        }
+        },
+        "files": [
+            "lib/Supports/Dotenv/function.php"
+        ]
     },
     "require": {
         "php": ">=8.4",
