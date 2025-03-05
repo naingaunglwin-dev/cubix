@@ -21,6 +21,7 @@ if (version_compare(phpversion(), '8.4', '<')) {
     );
 }
 
+# define a short constant version for DIRECTORY_SEPARATOR
 define('DS', DIRECTORY_SEPARATOR);
 
 /*
@@ -56,5 +57,18 @@ require_once join(DS, [DIR_ROOT, 'lib', 'Foundation', 'constant.php']);
 */
 require "../vendor/autoload.php";
 
-new \Cubix\Foundation\Application()
+/*
+ |-------------------------------------------------------------------
+ | Boot Application
+ |-------------------------------------------------------------------
+ |
+ | Loads the `app.php` bootstrap file and calls the
+ | `boot()` method of the `Application` class to finalize
+ | the bootstrapping process.
+ |
+ | @see DIR_BOOTSTRAP . 'app.php'  # Bootstrap config file
+ | @see \Cubix\Foundation\Application::boot()  # Bootstraps the app
+ |
+ */
+(require DIR_BOOTSTRAP . 'app.php')
     ->boot();
