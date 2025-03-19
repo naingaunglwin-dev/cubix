@@ -16,7 +16,8 @@
             "App\\": "app/"
         },
         "files": [
-            "lib/Supports/Dotenv/function.php"
+            "lib/Supports/Dotenv/function.php",
+            "lib/Supports/Collection/function.php"
         ]
     },
     "require": {
