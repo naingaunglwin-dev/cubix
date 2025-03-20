@@ -565,6 +565,26 @@ class Collection
     }
 
     /**
+     * Sort the items by keys in the collection
+     *
+     * @param callable|null $callback Optional callback to customize sorting behavior
+     *
+     * @return Collection A new collection with sorted items
+     */
+    public function ksort(?callable $callback = null): Collection
+    {
+        $array = $this->all();
+
+        if (!is_null($callback)) {
+            $array = $this->map(fn ($value, $key) => $callback($value, $key))->all();
+        }
+
+        ksort($array);
+
+        return new static($array);
+    }
+
+    /**
      * Update the collection items using a callback function
      *
      * @param callable|null $callback Optional callback to update the items
